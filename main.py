@@ -1,15 +1,15 @@
 import os
 from transformers import AutoTokenizer, Trainer, TrainingArguments
-from collators import My_collator
-from configs import MyGPT2Config
+from utils.collators import My_collator
+from utils.configs import MyGPT2Config
 import torch
 import numpy as np
 
 import argparse
 
-from networks import MyGPT2LMHeadModel
+from utils.networks import MyGPT2LMHeadModel
 from data_structure_related.data_structure import Goal_graph
-from utils import *
+from utils.utils import *
 import logging
 import sys
 

@@ -1,0 +1,12 @@
+2025-01-30 11:46:08,293 INFO    StreamThr :81630 [internal.py:wandb_internal():88] W&B internal server running at pid: 81630, started at: 2025-01-30 11:46:08.279771
+2025-01-30 11:46:08,295 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: status
+2025-01-30 11:46:08,371 DEBUG   SenderThread:81630 [tracking_sender.py:send_request():329] send_request: status
+2025-01-30 11:46:08,374 DEBUG   SenderThread:81630 [tracking_sender.py:send():315] send: header
+2025-01-30 11:46:08,374 INFO    WriterThread:81630 [datastore.py:open_for_write():77] open: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_114607-run_20250130_0cec11f3/run-run_20250130_0cec11f3.wandb
+2025-01-30 11:46:08,797 DEBUG   SenderThread:81630 [tracking_sender.py:send():315] send: run
+2025-01-30 11:46:08,825 INFO    SenderThread:81630 [tracking_sender.py:_maybe_setup_resume():588] checking resume status for None/huggingface/run_20250130_0cec11f3
+2025-01-30 11:46:13,799 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:46:18,800 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:46:23,802 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:46:28,804 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:46:33,806 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
