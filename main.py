@@ -47,8 +47,8 @@ parser.add_argument("--hidden_size", type=int, default=720)
 parser.add_argument("--if_train", type=str, default="y")
 parser.add_argument("--if_upload", type=str, default="y")
 parser.add_argument("--train_epoch", type=int, default=10)
-parser.add_argument("--per_device_train_batch_size", type=int, default=4)
-parser.add_argument("--per_device_eval_batch_size", type=int, default=4)
+parser.add_argument("--per_device_train_batch_size", type=int, default=8)
+parser.add_argument("--per_device_eval_batch_size", type=int, default=8)
 parser.add_argument("--save_steps", type=int, default=1000)
 parser.add_argument("--if_test", type=str, default="y")
 parser.add_argument("--if_plot", type=str, default="y")
@@ -142,7 +142,7 @@ Train_Args = TrainingArguments(
     save_steps=Args.save_steps,
         per_device_eval_batch_size=Args.per_device_eval_batch_size,                                                                                                               
         per_device_train_batch_size=Args.per_device_train_batch_size,  
-        report_to="none"
+        report_to="none",
 )
 
 def get_latest_checkpoint(outs_path):
@@ -182,6 +182,9 @@ if Args.if_test=="y" or Args.if_probe=="y" or Args.if_plot=="y":
                 model_path = f"{outs_path}/checkpoint-{Args.test_epoch}"
                 test_epoch = Args.test_epoch
         Model = MyGPT2LMHeadModel.from_pretrained(model_path, config=Config).to(Device)
+        training_args = torch.load(f"{model_path}/training_args.bin")
+        print("training_args=", training_args)
+
 
 if Args.if_test=="y":
         trainer = Trainer(

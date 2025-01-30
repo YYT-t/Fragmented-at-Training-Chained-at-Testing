@@ -7,7 +7,7 @@ nh=3
 
 for len in 5
 do
-for gt in 0 1 2 3 4
+for gt in 1 2 3 4
 do
 for child_len in 3 2
 do
