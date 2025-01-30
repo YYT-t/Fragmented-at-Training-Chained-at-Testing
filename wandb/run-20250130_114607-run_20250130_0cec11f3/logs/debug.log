@@ -14,3 +14,4 @@ config: {}
 2025-01-30 11:46:08,363 INFO    MainThread:79959 [wandb_init.py:init():582] backend started and connected
 2025-01-30 11:46:08,371 INFO    MainThread:79959 [wandb_init.py:init():660] updated telemetry
 2025-01-30 11:46:08,794 INFO    MainThread:79959 [wandb_init.py:init():695] communicating run to backend with 60 second timeout
+2025-01-30 11:46:48,572 INFO    MainThread:79959 [wandb_run.py:_on_init():2006] communicating current version

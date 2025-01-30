@@ -10,3 +10,13 @@
 2025-01-30 11:46:23,802 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
 2025-01-30 11:46:28,804 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
 2025-01-30 11:46:33,806 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:46:38,808 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:46:43,810 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:46:44,255 ERROR   SenderThread:81630 [tracking_cloud.py:request():95] Request failed! url: https://ml.byteintl.net/inner/CreateTrackingRun, req_body: {'ProjectId': 'project_20230126_e9daa974', 'Name': 'data_and_models/len5_width2_merge0/maxchildlen3_cl1_cu6_cd6_vocab52_envaln10_chainvaln50_lkpn0.0_lkpv0.0_addlen5_nearlen100_tl4_shot5_icl10000_mk20000/type0/outs_gpt2/layer36_head20_hidden1280', 'RunId': 'run_20250130_0cec11f3', 'Description': None, 'OuterType': 'merlin', 'OuterId': 'dd023068f7b5dde4', 'Tags': None, 'OuterInfo': {'arnold_trial_id': '10499713'}}, resp_body: b'{"ResponseMetadata":{"RequestId":"","Action":"","Version":"","Service":"","Region":"","Error":{"Code":"InvalidParameter","CodeN":1709905,"Message":"invalid run name: data_and_models/len5_width2_merge0/maxchildlen3_cl1_cu6_cd6_vocab52_envaln10_chainvaln50_lkpn0.0_lkpv0.0_addlen5_nearlen100_tl4_shot5_icl10000_mk20000/type0/outs_gpt2/layer36_head20_hidden1280, regex: ^[a-zA-Z0-9\xe4\xb8\x80-\xe9\xbe\xa5-_./@]{1,128}$","RawError":{},"HTTPCode":400}}}'
+2025-01-30 11:46:48,573 DEBUG   HandlerThread:81630 [handler.py:handle_request():140] handle_request: check_version
+2025-01-30 11:46:48,584 INFO    SenderThread:81630 [dir_watcher.py:__init__():216] watching files in: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_114607-run_20250130_0cec11f3/files
+2025-01-30 11:46:48,584 INFO    SenderThread:81630 [tracking_sender.py:_start_run_threads():934] run started: run_20250130_0cec11f3 with start time 1738237568.36983
+2025-01-30 11:46:48,584 DEBUG   SenderThread:81630 [tracking_sender.py:send():315] send: summary
+2025-01-30 11:46:48,604 INFO    SenderThread:81630 [tracking_sender.py:_save_file():1177] saving file wandb-summary.json with policy end
+2025-01-30 11:46:48,605 DEBUG   SenderThread:81630 [tracking_sender.py:send_request():329] send_request: check_version
+2025-01-30 11:46:49,592 INFO    Thread-14 :81630 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_114607-run_20250130_0cec11f3/files/wandb-summary.json
