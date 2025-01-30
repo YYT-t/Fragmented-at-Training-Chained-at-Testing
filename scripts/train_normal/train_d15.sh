@@ -5,7 +5,7 @@ save_steps=2000
 nl=3
 nh=3
 
-for len in 13
+for len in 15
 do
 for gt in 0 1 2 3 4
 do

@@ -141,7 +141,8 @@ Train_Args = TrainingArguments(
     num_train_epochs=Args.train_epoch,
     save_steps=Args.save_steps,
         per_device_eval_batch_size=Args.per_device_eval_batch_size,                                                                                                               
-        per_device_train_batch_size=Args.per_device_train_batch_size,   
+        per_device_train_batch_size=Args.per_device_train_batch_size,  
+        report_to="none"
 )
 
 def get_latest_checkpoint(outs_path):
