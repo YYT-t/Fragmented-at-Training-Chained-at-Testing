@@ -49,13 +49,14 @@ parser.add_argument("--if_upload", type=str, default="y")
 parser.add_argument("--train_epoch", type=int, default=10)
 parser.add_argument("--per_device_train_batch_size", type=int, default=8)
 parser.add_argument("--per_device_eval_batch_size", type=int, default=8)
+parser.add_argument("--gradient_accumulation_steps", type=int, default=1)
+parser.add_argument("--lr", type=float, default=5e-05)
 parser.add_argument("--save_steps", type=int, default=1000)
 parser.add_argument("--if_test", type=str, default="y")
 parser.add_argument("--if_plot", type=str, default="y")
 parser.add_argument("--if_probe", type=str, default="y")
 parser.add_argument("--probe_mean_num", type=int, default=10)
 parser.add_argument("--test_epoch", type=int, default=-1)
-
 parser.add_argument("--if_in_colab", type=str, default="n")
 
 Args = parser.parse_args()
@@ -143,6 +144,8 @@ Train_Args = TrainingArguments(
         per_device_eval_batch_size=Args.per_device_eval_batch_size,                                                                                                               
         per_device_train_batch_size=Args.per_device_train_batch_size,  
         report_to="none",
+        gradient_accumulation_steps=Args.gradient_accumulation_steps,
+        learning_rate=Args.lr,
 )
 
 def get_latest_checkpoint(outs_path):
