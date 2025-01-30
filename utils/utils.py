@@ -15,13 +15,13 @@ import os
 import pickle as pkl
 
 from datasets import Dataset, DatasetDict
-from probing_related import probing_MLP
+from demonstration.probing_related import probing_MLP
 
 from torch.utils.data.dataloader import DataLoader
 
 import numpy as np
 import random
-from text_attn import generate
+from demonstration.text_attn import generate
 import json
 
 plt.rcParams.update({

@@ -1,3 +1,4 @@
 data_and_models
 __pycache__
 wandb
+*__pycache__
