@@ -1,29 +1,656 @@
 wandb_version: 1
 
-_wandb:
+_attn_implementation_autoset:
+  desc: null
+  value: true
+_name_or_path:
+  desc: null
+  value: data_and_models/len5_width2_merge0/maxchildlen3_cl1_cu6_cd6_vocab52_envaln10_chainvaln50_lkpn0.0_lkpv0.0_addlen5_nearlen100_tl4_shot5_icl10000_mk20000/type0/outs_gpt2/layer36_head20_hidden1280/checkpoint-105000
+accelerator_config:
   desc: null
   value:
-    cli_version: 0.13.78
-    framework: huggingface
-    huggingface_version: 4.48.1
-    is_jupyter_run: false
-    is_kaggle_kernel: false
-    python_version: 3.11.2
-    start_time: 1738237568.36983
-    t:
-      1:
-      - 1
-      - 11
-      - 41
-      - 49
-      - 51
-      - 55
-      - 71
-      3:
-      - 13
-      - 23
-      4: 3.11.2
-      5: 0.13.78
-      6: 4.48.1
-      8:
-      - 5
+    dispatch_batches: null
+    even_batches: true
+    gradient_accumulation_kwargs: null
+    non_blocking: false
+    split_batches: false
+    use_seedable_sampler: true
+activation_function:
+  desc: null
+  value: gelu_new
+adafactor:
+  desc: null
+  value: false
+adam_beta1:
+  desc: null
+  value: 0.9
+adam_beta2:
+  desc: null
+  value: 0.999
+adam_epsilon:
+  desc: null
+  value: 1.0e-08
+add_cross_attention:
+  desc: null
+  value: false
+architectures:
+  desc: null
+  value: null
+attn_pdrop:
+  desc: null
+  value: 0.1
+auto_find_batch_size:
+  desc: null
+  value: false
+average_tokens_across_devices:
+  desc: null
+  value: false
+bad_words_ids:
+  desc: null
+  value: null
+batch_eval_metrics:
+  desc: null
+  value: false
+begin_suppress_tokens:
+  desc: null
+  value: null
+bf16:
+  desc: null
+  value: false
+bf16_full_eval:
+  desc: null
+  value: false
+bos_token_id:
+  desc: null
+  value: 50256
+chunk_size_feed_forward:
+  desc: null
+  value: 0
+cross_attention_hidden_size:
+  desc: null
+  value: null
+data_seed:
+  desc: null
+  value: null
+dataloader_drop_last:
+  desc: null
+  value: false
+dataloader_num_workers:
+  desc: null
+  value: 0
+dataloader_persistent_workers:
+  desc: null
+  value: false
+dataloader_pin_memory:
+  desc: null
+  value: true
+dataloader_prefetch_factor:
+  desc: null
+  value: null
+ddp_backend:
+  desc: null
+  value: null
+ddp_broadcast_buffers:
+  desc: null
+  value: null
+ddp_bucket_cap_mb:
+  desc: null
+  value: null
+ddp_find_unused_parameters:
+  desc: null
+  value: null
+ddp_timeout:
+  desc: null
+  value: 1800
+debug:
+  desc: null
+  value: []
+decoder_start_token_id:
+  desc: null
+  value: null
+deepspeed:
+  desc: null
+  value: null
+disable_tqdm:
+  desc: null
+  value: false
+dispatch_batches:
+  desc: null
+  value: null
+diversity_penalty:
+  desc: null
+  value: 0.0
+do_eval:
+  desc: null
+  value: true
+do_predict:
+  desc: null
+  value: false
+do_sample:
+  desc: null
+  value: false
+do_train:
+  desc: null
+  value: false
+early_stopping:
+  desc: null
+  value: false
+embd_pdrop:
+  desc: null
+  value: 0.1
+encoder_no_repeat_ngram_size:
+  desc: null
+  value: 0
+eos_token_id:
+  desc: null
+  value: 50256
+eval_accumulation_steps:
+  desc: null
+  value: null
+eval_delay:
+  desc: null
+  value: 0
+eval_do_concat_batches:
+  desc: null
+  value: true
+eval_on_start:
+  desc: null
+  value: false
+eval_steps:
+  desc: null
+  value: null
+eval_strategy:
+  desc: null
+  value: epoch
+eval_use_gather_object:
+  desc: null
+  value: false
+evaluation_strategy:
+  desc: null
+  value: null
+exponential_decay_length_penalty:
+  desc: null
+  value: null
+finetuning_task:
+  desc: null
+  value: null
+forced_bos_token_id:
+  desc: null
+  value: null
+forced_eos_token_id:
+  desc: null
+  value: null
+fp16:
+  desc: null
+  value: false
+fp16_backend:
+  desc: null
+  value: auto
+fp16_full_eval:
+  desc: null
+  value: false
+fp16_opt_level:
+  desc: null
+  value: O1
+fsdp:
+  desc: null
+  value: []
+fsdp_config:
+  desc: null
+  value:
+    min_num_params: 0
+    xla: false
+    xla_fsdp_grad_ckpt: false
+    xla_fsdp_v2: false
+fsdp_min_num_params:
+  desc: null
+  value: 0
+fsdp_transformer_layer_cls_to_wrap:
+  desc: null
+  value: null
+full_determinism:
+  desc: null
+  value: false
+gradient_accumulation_steps:
+  desc: null
+  value: 1
+gradient_checkpointing:
+  desc: null
+  value: false
+gradient_checkpointing_kwargs:
+  desc: null
+  value: null
+greater_is_better:
+  desc: null
+  value: null
+group_by_length:
+  desc: null
+  value: false
+half_precision_backend:
+  desc: null
+  value: auto
+hub_always_push:
+  desc: null
+  value: false
+hub_model_id:
+  desc: null
+  value: null
+hub_private_repo:
+  desc: null
+  value: null
+hub_strategy:
+  desc: null
+  value: every_save
+hub_token:
+  desc: null
+  value: <HUB_TOKEN>
+id2label:
+  desc: null
+  value:
+    '0': LABEL_0
+    '1': LABEL_1
+ignore_data_skip:
+  desc: null
+  value: false
+include_for_metrics:
+  desc: null
+  value: []
+include_inputs_for_metrics:
+  desc: null
+  value: false
+include_num_input_tokens_seen:
+  desc: null
+  value: false
+include_tokens_per_second:
+  desc: null
+  value: false
+initializer_range:
+  desc: null
+  value: 0.02
+is_decoder:
+  desc: null
+  value: false
+is_encoder_decoder:
+  desc: null
+  value: false
+jit_mode_eval:
+  desc: null
+  value: false
+label2id:
+  desc: null
+  value:
+    LABEL_0: 0
+    LABEL_1: 1
+label_names:
+  desc: null
+  value: null
+label_smoothing_factor:
+  desc: null
+  value: 0.0
+layer_norm_epsilon:
+  desc: null
+  value: 1.0e-05
+learning_rate:
+  desc: null
+  value: 5.0e-05
+length_column_name:
+  desc: null
+  value: length
+length_penalty:
+  desc: null
+  value: 1.0
+load_best_model_at_end:
+  desc: null
+  value: false
+local_rank:
+  desc: null
+  value: 0
+log_level:
+  desc: null
+  value: passive
+log_level_replica:
+  desc: null
+  value: warning
+log_on_each_node:
+  desc: null
+  value: true
+logging_dir:
+  desc: null
+  value: data_and_models/len5_width2_merge0/maxchildlen3_cl1_cu6_cd6_vocab52_envaln10_chainvaln50_lkpn0.0_lkpv0.0_addlen5_nearlen100_tl4_shot5_icl10000_mk20000/type0/outs_gpt2/layer36_head20_hidden1280/runs/Jan30_11-42-12_n124-253-218
+logging_first_step:
+  desc: null
+  value: false
+logging_nan_inf_filter:
+  desc: null
+  value: true
+logging_steps:
+  desc: null
+  value: 500
+logging_strategy:
+  desc: null
+  value: steps
+low_rank:
+  desc: null
+  value: null
+lr_scheduler_kwargs:
+  desc: null
+  value: {}
+lr_scheduler_type:
+  desc: null
+  value: linear
+max_grad_norm:
+  desc: null
+  value: 1.0
+max_length:
+  desc: null
+  value: 20
+max_steps:
+  desc: null
+  value: -1
+metric_for_best_model:
+  desc: null
+  value: null
+min_length:
+  desc: null
+  value: 0
+model/num_parameters:
+  desc: null
+  value: 775340800
+model_type:
+  desc: null
+  value: gpt2
+mp_parameters:
+  desc: null
+  value: ''
+n_ctx:
+  desc: null
+  value: 2048
+n_embd:
+  desc: null
+  value: 1280
+n_head:
+  desc: null
+  value: 20
+n_inner:
+  desc: null
+  value: null
+n_layer:
+  desc: null
+  value: 36
+n_positions:
+  desc: null
+  value: 2048
+neftune_noise_alpha:
+  desc: null
+  value: null
+network_type:
+  desc: null
+  value: null
+no_cuda:
+  desc: null
+  value: false
+no_repeat_ngram_size:
+  desc: null
+  value: 0
+num_beam_groups:
+  desc: null
+  value: 1
+num_beams:
+  desc: null
+  value: 1
+num_return_sequences:
+  desc: null
+  value: 1
+num_train_epochs:
+  desc: null
+  value: 14
+optim:
+  desc: null
+  value: adamw_torch
+optim_args:
+  desc: null
+  value: null
+optim_target_modules:
+  desc: null
+  value: null
+output_attentions:
+  desc: null
+  value: false
+output_dir:
+  desc: null
+  value: data_and_models/len5_width2_merge0/maxchildlen3_cl1_cu6_cd6_vocab52_envaln10_chainvaln50_lkpn0.0_lkpv0.0_addlen5_nearlen100_tl4_shot5_icl10000_mk20000/type0/outs_gpt2/layer36_head20_hidden1280
+output_hidden_states:
+  desc: null
+  value: false
+output_scores:
+  desc: null
+  value: false
+overwrite_output_dir:
+  desc: null
+  value: false
+pad_token_id:
+  desc: null
+  value: null
+past_index:
+  desc: null
+  value: -1
+per_device_eval_batch_size:
+  desc: null
+  value: 4
+per_device_train_batch_size:
+  desc: null
+  value: 4
+per_gpu_eval_batch_size:
+  desc: null
+  value: null
+per_gpu_train_batch_size:
+  desc: null
+  value: null
+prediction_loss_only:
+  desc: null
+  value: false
+prefix:
+  desc: null
+  value: null
+problem_type:
+  desc: null
+  value: null
+pruned_heads:
+  desc: null
+  value: {}
+push_to_hub:
+  desc: null
+  value: false
+push_to_hub_model_id:
+  desc: null
+  value: null
+push_to_hub_organization:
+  desc: null
+  value: null
+push_to_hub_token:
+  desc: null
+  value: <PUSH_TO_HUB_TOKEN>
+ray_scope:
+  desc: null
+  value: last
+remove_invalid_values:
+  desc: null
+  value: false
+remove_unused_columns:
+  desc: null
+  value: true
+reorder_and_upcast_attn:
+  desc: null
+  value: false
+repetition_penalty:
+  desc: null
+  value: 1.0
+report_to:
+  desc: null
+  value:
+  - wandb
+resid_pdrop:
+  desc: null
+  value: 0.1
+restore_callback_states_from_checkpoint:
+  desc: null
+  value: false
+resume_from_checkpoint:
+  desc: null
+  value: null
+return_dict:
+  desc: null
+  value: true
+return_dict_in_generate:
+  desc: null
+  value: false
+run_name:
+  desc: null
+  value: data_and_models/len5_width2_merge0/maxchildlen3_cl1_cu6_cd6_vocab52_envaln10_chainvaln50_lkpn0.0_lkpv0.0_addlen5_nearlen100_tl4_shot5_icl10000_mk20000/type0/outs_gpt2/layer36_head20_hidden1280
+save_on_each_node:
+  desc: null
+  value: false
+save_only_model:
+  desc: null
+  value: false
+save_safetensors:
+  desc: null
+  value: true
+save_steps:
+  desc: null
+  value: 10000
+save_strategy:
+  desc: null
+  value: steps
+save_total_limit:
+  desc: null
+  value: null
+scale_attn_by_inverse_layer_idx:
+  desc: null
+  value: false
+scale_attn_weights:
+  desc: null
+  value: true
+seed:
+  desc: null
+  value: 42
+sep_token_id:
+  desc: null
+  value: null
+skip_memory_metrics:
+  desc: null
+  value: true
+split_batches:
+  desc: null
+  value: null
+summary_activation:
+  desc: null
+  value: null
+summary_first_dropout:
+  desc: null
+  value: 0.1
+summary_proj_to_labels:
+  desc: null
+  value: true
+summary_type:
+  desc: null
+  value: cls_index
+summary_use_proj:
+  desc: null
+  value: true
+suppress_tokens:
+  desc: null
+  value: null
+task_specific_params:
+  desc: null
+  value: null
+temperature:
+  desc: null
+  value: 1.0
+tf32:
+  desc: null
+  value: null
+tf_legacy_loss:
+  desc: null
+  value: false
+tie_encoder_decoder:
+  desc: null
+  value: false
+tie_word_embeddings:
+  desc: null
+  value: true
+tokenizer_class:
+  desc: null
+  value: null
+top_k:
+  desc: null
+  value: 50
+top_p:
+  desc: null
+  value: 1.0
+torch_compile:
+  desc: null
+  value: false
+torch_compile_backend:
+  desc: null
+  value: null
+torch_compile_mode:
+  desc: null
+  value: null
+torch_dtype:
+  desc: null
+  value: null
+torch_empty_cache_steps:
+  desc: null
+  value: null
+torchdynamo:
+  desc: null
+  value: null
+torchscript:
+  desc: null
+  value: false
+tpu_metrics_debug:
+  desc: null
+  value: false
+tpu_num_cores:
+  desc: null
+  value: null
+transformers_version:
+  desc: null
+  value: 4.48.1
+typical_p:
+  desc: null
+  value: 1.0
+use_bfloat16:
+  desc: null
+  value: false
+use_cache:
+  desc: null
+  value: true
+use_cpu:
+  desc: null
+  value: false
+use_ipex:
+  desc: null
+  value: false
+use_legacy_prediction_loop:
+  desc: null
+  value: false
+use_liger_kernel:
+  desc: null
+  value: false
+use_mps_device:
+  desc: null
+  value: false
+vocab_size:
+  desc: null
+  value: 50257
+warmup_ratio:
+  desc: null
+  value: 0.0
+warmup_steps:
+  desc: null
+  value: 0
+weight_decay:
+  desc: null
+  value: 0.0
