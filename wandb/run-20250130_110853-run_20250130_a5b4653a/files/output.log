@@ -1,0 +1,114 @@
+{'eval_loss': 1.7025048732757568, 'eval_model_preparation_time': 0.0005, 'eval_runtime': 0.5825, 'eval_samples_per_second': 343.32, 'eval_steps_per_second': 42.915}
+shots num: 0
+whole acc=0.0
+fin_tok_acc=0.0
+letter_acc=0.0
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:00<00:00, 11.81it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:00<00:00, 139.37it/s]
+te_val_acc=0.397
+test node_ds
+test val_ds
+mk_node_acc=0.03
+mk_val_acc=0.52
+icl_acc=0.06
+shots num: 1
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  6.24it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 87.93it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  6.27it/s]
+ 80%|███████████████████████████████████████████████████████████████████████████████████▏                    | 8/10 [00:00<00:00, 12.67it/s]
+whole acc=0.0
+fin_tok_acc=0.0
+letter_acc=0.0
+te_val_acc=0.372
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:00<00:00, 12.63it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:00<00:00, 87.04it/s]
+ 50%|████████████████████████████████████████████████████▌                                                    | 1/2 [00:00<00:00,  6.14it/s]
+test val_ds
+mk_node_acc=0.61
+mk_val_acc=0.48
+icl_acc=0.05
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  6.18it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 56.61it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  6.06it/s]
+ 60%|██████████████████████████████████████████████████████████████▍                                         | 6/10 [00:00<00:00, 11.58it/s]
+whole acc=0.0
+fin_tok_acc=0.002
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:00<00:00, 11.54it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:00<00:00, 65.32it/s]
+te_val_acc=0.391
+test node_ds
+test val_ds
+mk_node_acc=0.51
+mk_val_acc=0.5
+icl_acc=0.03
+shots num: 3
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  5.85it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 39.55it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  6.01it/s]
+whole acc=0.0
+fin_tok_acc=0.002
+letter_acc=0.0
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:00<00:00, 11.32it/s]
+te_val_acc=0.391
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:00<00:00, 50.34it/s]
+  0%|                                                                                                                 | 0/2 [00:00<?, ?it/s]
+test node_ds
+test val_ds
+mk_node_acc=0.58
+mk_val_acc=0.51
+icl_acc=0.02
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  5.64it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 31.11it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  5.52it/s]
+whole acc=0.0
+fin_tok_acc=0.0
+letter_acc=0.0
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:00<00:00, 10.77it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:00<00:00, 42.96it/s]
+te_val_acc=0.376
+test node_ds
+test val_ds
+mk_node_acc=0.62
+mk_val_acc=0.41
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  5.21it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 25.35it/s]
+Traceback (most recent call last):
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/main.py", line 203, in <module>
+    do_test(My_Goal_graph, Model, Tokenizer, Test_max_examples, Test_len, logger)
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/utils.py", line 263, in do_test
+    icl_accs = goal_graph.test_icl_accs(2, model, i, 100, tokenizer)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/data_structure_related/data_structure.py", line 763, in test_icl_accs
+    ds = self.generate_icl_tests(max_child_chain_len, shot_num, total_num)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/data_structure_related/data_structure.py", line 742, in generate_icl_tests
+    t_map = self.generate_one_mk_example(max_child_chain_len, shot_num+1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/data_structure_related/data_structure.py", line 439, in generate_one_mk_example
+    this_trace_map = self.generate_mk_tracemap(senmap)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/data_structure_related/data_structure.py", line 430, in generate_mk_tracemap
+    this_trace_map = self.draw_trace(sen, inter_vals)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/data_structure_related/data_structure.py", line 303, in draw_trace
+    trace_chain += self.tokenizer.encode(str(vals[i])) +self.tokenizer.encode(",")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/.local/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 2635, in encode
+    encoded_inputs = self.encode_plus(
+                     ^^^^^^^^^^^^^^^^^
+  File "/home/tiger/.local/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 3054, in encode_plus
+    return self._encode_plus(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/.local/lib/python3.11/site-packages/transformers/models/gpt2/tokenization_gpt2_fast.py", line 126, in _encode_plus
+    return super()._encode_plus(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/.local/lib/python3.11/site-packages/transformers/tokenization_utils_fast.py", line 613, in _encode_plus
+    batched_output = self._batch_encode_plus(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/.local/lib/python3.11/site-packages/transformers/models/gpt2/tokenization_gpt2_fast.py", line 116, in _batch_encode_plus
+    return super()._batch_encode_plus(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/.local/lib/python3.11/site-packages/transformers/tokenization_utils_fast.py", line 539, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

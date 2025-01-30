@@ -1,0 +1,176 @@
+2025-01-30 11:08:53,838 INFO    StreamThr :64001 [internal.py:wandb_internal():88] W&B internal server running at pid: 64001, started at: 2025-01-30 11:08:53.824653
+2025-01-30 11:08:53,839 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: status
+2025-01-30 11:08:53,937 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: status
+2025-01-30 11:08:53,940 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: header
+2025-01-30 11:08:53,940 INFO    WriterThread:64001 [datastore.py:open_for_write():77] open: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/run-run_20250130_a5b4653a.wandb
+2025-01-30 11:08:54,346 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: run
+2025-01-30 11:08:54,375 INFO    SenderThread:64001 [tracking_sender.py:_maybe_setup_resume():588] checking resume status for None/huggingface/run_20250130_a5b4653a
+2025-01-30 11:08:59,348 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:09:04,350 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:09:09,352 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:09:14,354 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:09:19,356 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:09:24,358 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:09:29,359 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: keepalive
+2025-01-30 11:09:29,886 ERROR   SenderThread:64001 [tracking_cloud.py:request():95] Request failed! url: https://ml.byteintl.net/inner/CreateTrackingRun, req_body: {'ProjectId': 'project_20230126_e9daa974', 'Name': 'data_and_models/len5_width2_merge0/maxchildlen3_cl1_cu7_cd7_vocab52_envaln10_chainvaln50_lkpn0.0_lkpv0.0_addlen5_nearlen100_tl4_shot5_icl5000_mk20000/type0/outs_gpt2/layer1_head1_hidden720', 'RunId': 'run_20250130_a5b4653a', 'Description': None, 'OuterType': 'merlin', 'OuterId': 'dd023068f7b5dde4', 'Tags': None, 'OuterInfo': {'arnold_trial_id': '10499713'}}, resp_body: b'{"ResponseMetadata":{"RequestId":"","Action":"","Version":"","Service":"","Region":"","Error":{"Code":"InvalidParameter","CodeN":1709905,"Message":"invalid run name: data_and_models/len5_width2_merge0/maxchildlen3_cl1_cu7_cd7_vocab52_envaln10_chainvaln50_lkpn0.0_lkpv0.0_addlen5_nearlen100_tl4_shot5_icl5000_mk20000/type0/outs_gpt2/layer1_head1_hidden720, regex: ^[a-zA-Z0-9\xe4\xb8\x80-\xe9\xbe\xa5-_./@]{1,128}$","RawError":{},"HTTPCode":400}}}'
+2025-01-30 11:09:34,272 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: check_version
+2025-01-30 11:09:34,283 INFO    SenderThread:64001 [dir_watcher.py:__init__():216] watching files in: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files
+2025-01-30 11:09:34,283 INFO    SenderThread:64001 [tracking_sender.py:_start_run_threads():934] run started: run_20250130_a5b4653a with start time 1738235333.91426
+2025-01-30 11:09:34,283 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: summary
+2025-01-30 11:09:34,304 INFO    SenderThread:64001 [tracking_sender.py:_save_file():1177] saving file wandb-summary.json with policy end
+2025-01-30 11:09:34,304 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: check_version
+2025-01-30 11:09:35,291 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/wandb-summary.json
+2025-01-30 11:09:39,367 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: run_start
+2025-01-30 11:09:39,402 DEBUG   HandlerThread:64001 [system_info.py:__init__():31] System info init
+2025-01-30 11:09:39,402 DEBUG   HandlerThread:64001 [system_info.py:__init__():46] System info init done
+2025-01-30 11:09:39,402 INFO    HandlerThread:64001 [system_monitor.py:start():150] Starting system monitor
+2025-01-30 11:09:39,403 INFO    SystemMonitor:64001 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2025-01-30 11:09:39,403 INFO    HandlerThread:64001 [system_monitor.py:probe():168] Collecting system info
+2025-01-30 11:09:39,404 INFO    SystemMonitor:64001 [interfaces.py:start():168] Started cpu
+2025-01-30 11:09:39,405 INFO    SystemMonitor:64001 [interfaces.py:start():168] Started disk
+2025-01-30 11:09:39,405 INFO    SystemMonitor:64001 [interfaces.py:start():168] Started gpu
+2025-01-30 11:09:39,406 INFO    SystemMonitor:64001 [interfaces.py:start():168] Started memory
+2025-01-30 11:09:39,407 INFO    SystemMonitor:64001 [interfaces.py:start():168] Started network
+2025-01-30 11:09:39,443 DEBUG   HandlerThread:64001 [system_info.py:probe():195] Probing system
+2025-01-30 11:09:39,484 DEBUG   HandlerThread:64001 [system_info.py:_probe_git():180] Probing git
+2025-01-30 11:09:39,884 DEBUG   HandlerThread:64001 [system_info.py:_probe_git():188] Probing git done
+2025-01-30 11:09:39,885 DEBUG   HandlerThread:64001 [system_info.py:probe():241] Probing system done
+2025-01-30 11:09:39,885 DEBUG   HandlerThread:64001 [system_monitor.py:probe():177] {'os': 'Linux-5.15.120.bsk.2-amd64-x86_64-with-glibc2.36', 'python': '3.11.2', 'heartbeatAt': '2025-01-30T11:09:39.443519', 'startedAt': '2025-01-30T11:08:53.401172', 'docker': None, 'cuda': None, 'args': ('--graph_type', '0', '--graph_len', '5', '--max_child_chain_len', '3', '--n_layers', '1', '--n_heads', '1', '--if_train', 'n', '--train_epoch', '5', '--save_steps', '2000', '--if_test', 'y', '--if_plot', 'n', '--if_probe', 'n'), 'state': 'running', 'program': '/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/main.py', 'codePath': 'main.py', 'git': {'remote': 'git@github.com:YYT-t/Fragmented-at-Training-Chained-at-Testing.git', 'commit': 'b0660e589721e0d130215729ccd8506fe1cfb0cd'}, 'email': 'yutong.y@bytedance.com', 'root': '/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing', 'host': 'n124-253-218', 'username': 'tiger', 'executable': '/usr/bin/python', 'cpu_count': 96, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2062.5912187499976, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2341.902, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2139.029, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 3017.491, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 3254.754, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}, {'current': 3254.887, 'min': 0.0, 'max': 0.0}, {'current': 2000.001, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 3519.748878479004, 'used': 398.9804496765137}, 'gpu': 'NVIDIA H100 80GB HBM3', 'gpu_count': 5, 'gpu_devices': [{'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}], 'memory': {'total': 1869.4292221069336}}
+2025-01-30 11:09:39,885 INFO    HandlerThread:64001 [system_monitor.py:probe():178] Finished collecting system info
+2025-01-30 11:09:39,885 INFO    HandlerThread:64001 [system_monitor.py:probe():181] Publishing system info
+2025-01-30 11:09:39,885 DEBUG   HandlerThread:64001 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2025-01-30 11:09:39,905 DEBUG   HandlerThread:64001 [system_info.py:_save_pip():67] Saving pip packages done
+2025-01-30 11:09:39,927 INFO    HandlerThread:64001 [system_monitor.py:probe():183] Finished publishing system info
+2025-01-30 11:09:39,929 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: files
+2025-01-30 11:09:39,930 INFO    SenderThread:64001 [tracking_sender.py:_save_file():1177] saving file wandb-metadata.json with policy now
+2025-01-30 11:09:39,938 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: stop_status
+2025-01-30 11:09:39,938 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: stop_status
+2025-01-30 11:09:39,940 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: telemetry
+2025-01-30 11:09:39,952 INFO    Thread-16 :64001 [upload_job.py:push():143] Uploaded file /tmp/tmpsmjsal34wandb/g9zdlrqb-wandb-metadata.json
+2025-01-30 11:09:39,985 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: partial_history
+2025-01-30 11:09:39,987 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: config
+2025-01-30 11:09:39,988 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: metric
+2025-01-30 11:09:39,988 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: telemetry
+2025-01-30 11:09:39,988 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: metric
+2025-01-30 11:09:39,988 WARNING SenderThread:64001 [tracking_sender.py:send_metric():1133] Seen metric with glob (shouldn't happen)
+2025-01-30 11:09:39,988 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: telemetry
+2025-01-30 11:09:39,989 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: telemetry
+2025-01-30 11:09:39,989 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: config
+2025-01-30 11:09:39,989 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: metric
+2025-01-30 11:09:39,989 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: metric
+2025-01-30 11:09:39,989 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: metric
+2025-01-30 11:09:39,989 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: metric
+2025-01-30 11:09:39,989 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: metric
+2025-01-30 11:09:39,989 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: history
+2025-01-30 11:09:39,989 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: summary
+2025-01-30 11:09:40,023 INFO    SenderThread:64001 [tracking_sender.py:_save_file():1177] saving file wandb-summary.json with policy end
+2025-01-30 11:09:40,334 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/wandb-summary.json
+2025-01-30 11:09:40,334 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:09:40,334 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/requirements.txt
+2025-01-30 11:09:40,334 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/wandb-metadata.json
+2025-01-30 11:09:42,349 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:09:44,365 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:09:46,380 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:09:48,394 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:09:50,409 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:09:52,426 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:09:54,441 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:09:54,942 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: stop_status
+2025-01-30 11:09:54,943 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: stop_status
+2025-01-30 11:09:56,455 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:09:58,471 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:10:00,485 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:10:02,500 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:10:02,943 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: exit
+2025-01-30 11:10:02,943 INFO    SenderThread:64001 [tracking_sender.py:send_exit():438] handling exit code: 255
+2025-01-30 11:10:02,943 INFO    SenderThread:64001 [tracking_sender.py:send_exit():440] handling runtime: 23
+2025-01-30 11:10:02,976 INFO    SenderThread:64001 [tracking_sender.py:_save_file():1177] saving file wandb-summary.json with policy end
+2025-01-30 11:10:02,977 INFO    SenderThread:64001 [tracking_sender.py:send_exit():446] send defer
+2025-01-30 11:10:02,977 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:02,978 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 0
+2025-01-30 11:10:02,978 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:02,978 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 0
+2025-01-30 11:10:02,978 INFO    SenderThread:64001 [tracking_sender.py:transition_state():459] send defer: 1
+2025-01-30 11:10:02,978 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:02,978 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 1
+2025-01-30 11:10:02,978 INFO    HandlerThread:64001 [system_monitor.py:finish():160] Stopping system monitor
+2025-01-30 11:10:02,979 DEBUG   SystemMonitor:64001 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2025-01-30 11:10:02,980 INFO    HandlerThread:64001 [interfaces.py:finish():173] Joined cpu
+2025-01-30 11:10:02,980 INFO    HandlerThread:64001 [interfaces.py:finish():173] Joined disk
+2025-01-30 11:10:02,980 DEBUG   SystemMonitor:64001 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2025-01-30 11:10:02,980 DEBUG   SystemMonitor:64001 [system_monitor.py:_start():141] Publishing last batch of metrics
+2025-01-30 11:10:03,001 INFO    HandlerThread:64001 [interfaces.py:finish():173] Joined gpu
+2025-01-30 11:10:03,001 INFO    HandlerThread:64001 [interfaces.py:finish():173] Joined memory
+2025-01-30 11:10:03,001 INFO    HandlerThread:64001 [interfaces.py:finish():173] Joined network
+2025-01-30 11:10:03,002 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:03,003 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 1
+2025-01-30 11:10:03,003 INFO    SenderThread:64001 [tracking_sender.py:transition_state():459] send defer: 2
+2025-01-30 11:10:03,003 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: stats
+2025-01-30 11:10:03,004 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:03,004 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 2
+2025-01-30 11:10:03,004 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:03,004 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 2
+2025-01-30 11:10:03,004 INFO    SenderThread:64001 [tracking_sender.py:transition_state():459] send defer: 3
+2025-01-30 11:10:03,004 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:03,005 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 3
+2025-01-30 11:10:03,005 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:03,005 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 3
+2025-01-30 11:10:03,005 INFO    SenderThread:64001 [tracking_sender.py:transition_state():459] send defer: 4
+2025-01-30 11:10:03,005 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:03,005 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 4
+2025-01-30 11:10:03,005 DEBUG   SenderThread:64001 [tracking_sender.py:send():315] send: summary
+2025-01-30 11:10:03,039 INFO    SenderThread:64001 [tracking_sender.py:_save_file():1177] saving file wandb-summary.json with policy end
+2025-01-30 11:10:03,039 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:03,039 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 4
+2025-01-30 11:10:03,039 INFO    SenderThread:64001 [tracking_sender.py:transition_state():459] send defer: 5
+2025-01-30 11:10:03,040 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:03,040 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 5
+2025-01-30 11:10:03,040 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:03,040 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 5
+2025-01-30 11:10:03,508 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/wandb-summary.json
+2025-01-30 11:10:03,943 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: poll_exit
+2025-01-30 11:10:04,514 INFO    Thread-14 :64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:10:05,884 INFO    SenderThread:64001 [tracking_sender.py:transition_state():459] send defer: 6
+2025-01-30 11:10:05,884 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: poll_exit
+2025-01-30 11:10:05,886 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:05,886 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 6
+2025-01-30 11:10:05,886 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:05,886 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 6
+2025-01-30 11:10:06,228 INFO    SenderThread:64001 [tracking_sender.py:transition_state():459] send defer: 7
+2025-01-30 11:10:06,229 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:06,229 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 7
+2025-01-30 11:10:06,229 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:06,229 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 7
+2025-01-30 11:10:06,229 INFO    SenderThread:64001 [dir_watcher.py:finish():362] shutting down directory watcher
+2025-01-30 11:10:06,523 INFO    SenderThread:64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:10:06,523 INFO    SenderThread:64001 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/config.yaml
+2025-01-30 11:10:06,523 INFO    SenderThread:64001 [dir_watcher.py:finish():392] scan: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files
+2025-01-30 11:10:06,530 INFO    SenderThread:64001 [dir_watcher.py:finish():406] scan save: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/config.yaml config.yaml
+2025-01-30 11:10:06,530 INFO    SenderThread:64001 [dir_watcher.py:finish():406] scan save: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log output.log
+2025-01-30 11:10:06,531 INFO    SenderThread:64001 [dir_watcher.py:finish():406] scan save: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/requirements.txt requirements.txt
+2025-01-30 11:10:06,531 INFO    SenderThread:64001 [dir_watcher.py:finish():406] scan save: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/wandb-metadata.json wandb-metadata.json
+2025-01-30 11:10:06,531 INFO    SenderThread:64001 [dir_watcher.py:finish():406] scan save: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/wandb-summary.json wandb-summary.json
+2025-01-30 11:10:06,531 INFO    SenderThread:64001 [tracking_sender.py:transition_state():459] send defer: 8
+2025-01-30 11:10:06,532 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:06,532 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 8
+2025-01-30 11:10:06,532 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:06,532 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 8
+2025-01-30 11:10:06,532 INFO    SenderThread:64001 [file_pusher.py:finish():168] shutting down file pusher
+2025-01-30 11:10:06,620 INFO    Thread-17 :64001 [upload_job.py:push():143] Uploaded file /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/config.yaml
+2025-01-30 11:10:06,641 INFO    Thread-20 :64001 [upload_job.py:push():143] Uploaded file /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/wandb-summary.json
+2025-01-30 11:10:06,671 INFO    Thread-19 :64001 [upload_job.py:push():143] Uploaded file /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/requirements.txt
+2025-01-30 11:10:06,699 INFO    Thread-18 :64001 [upload_job.py:push():143] Uploaded file /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/files/output.log
+2025-01-30 11:10:06,849 WARNING StreamThr :64001 [internal.py:is_dead():385] Internal process exiting, parent pid 63721 disappeared
+2025-01-30 11:10:06,849 ERROR   StreamThr :64001 [internal.py:wandb_internal():147] Internal process shutdown.
+2025-01-30 11:10:06,899 INFO    Thread-13 (_thread_body):64001 [tracking_sender.py:transition_state():459] send defer: 9
+2025-01-30 11:10:06,900 DEBUG   HandlerThread:64001 [handler.py:handle_request():140] handle_request: defer
+2025-01-30 11:10:06,900 INFO    HandlerThread:64001 [handler.py:handle_request_defer():163] handle defer: 9
+2025-01-30 11:10:06,900 INFO    HandlerThread:64001 [handler.py:finish():817] shutting down handler
+2025-01-30 11:10:06,900 DEBUG   SenderThread:64001 [tracking_sender.py:send_request():329] send_request: defer
+2025-01-30 11:10:06,900 INFO    SenderThread:64001 [tracking_sender.py:send_request_defer():455] handle sender defer: 9
+2025-01-30 11:10:06,900 INFO    SenderThread:64001 [file_pusher.py:join():173] waiting for file pusher
+2025-01-30 11:10:06,900 INFO    SenderThread:64001 [tracking_sender.py:transition_state():459] send defer: 10
+2025-01-30 11:10:06,901 INFO    SenderThread:64001 [tracking_sender.py:finish():1338] shutting down sender
+2025-01-30 11:10:06,901 INFO    SenderThread:64001 [file_pusher.py:finish():168] shutting down file pusher
+2025-01-30 11:10:06,901 INFO    SenderThread:64001 [file_pusher.py:join():173] waiting for file pusher
+2025-01-30 11:10:07,006 INFO    WriterThread:64001 [datastore.py:close():283] close: /mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/wandb/run-20250130_110853-run_20250130_a5b4653a/run-run_20250130_a5b4653a.wandb

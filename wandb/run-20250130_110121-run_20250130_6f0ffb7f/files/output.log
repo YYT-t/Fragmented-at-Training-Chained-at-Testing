@@ -1,0 +1,70 @@
+{'eval_loss': 1.4402377605438232, 'eval_model_preparation_time': 0.0007, 'eval_runtime': 0.642, 'eval_samples_per_second': 311.527, 'eval_steps_per_second': 38.941}
+shots num: 0
+whole acc=0.0
+fin_tok_acc=0.0
+letter_acc=0.0
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:01<00:00,  7.51it/s]
+te_val_acc=1.0
+test node_ds
+test val_ds
+mk_node_acc=0.96
+mk_val_acc=1.0
+icl_acc=0.0
+shots num: 1
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:00<00:00, 108.93it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  3.90it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 65.09it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  3.98it/s]
+whole acc=0.972
+fin_tok_acc=0.972
+letter_acc=0.998
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:01<00:00,  7.96it/s]
+te_val_acc=1.0
+test node_ds
+test val_ds
+mk_node_acc=1.0
+mk_val_acc=1.0
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:00<00:00, 64.49it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  3.88it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 40.45it/s]
+ 50%|████████████████████████████████████████████████████▌                                                    | 1/2 [00:00<00:00,  3.81it/s]
+icl_acc=0.91
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  3.76it/s]
+  0%|                                                                                                                | 0/10 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/main.py", line 203, in <module>
+    do_test(My_Goal_graph, Model, Tokenizer, Test_max_examples, Test_len, logger)
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/utils.py", line 245, in do_test
+    accs = goal_graph.test_compositional_accs(test_len, model, i, 50, tokenizer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/data_structure_related/data_structure.py", line 518, in test_compositional_accs
+    outputs = model.generate(prompts, max_new_tokens=new_tokens_len, pad_token_id=tokenizer.eos_token_id, attention_mask=attention_masks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/.local/lib/python3.11/site-packages/transformers/generation/utils.py", line 2255, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "/home/tiger/.local/lib/python3.11/site-packages/transformers/generation/utils.py", line 3257, in _sample
+    outputs = model_forward(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/networks.py", line 639, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/videonasi18n/yutong/Fragmented-at-Training-Chained-at-Testing/networks.py", line 453, in forward
+    attention_mask = attention_mask.to(dtype=self.dtype)  # fp16 compatibility
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

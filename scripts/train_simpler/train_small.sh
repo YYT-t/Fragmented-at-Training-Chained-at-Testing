@@ -1,10 +1,13 @@
 export CUDA_VISIBLE_DEVICES="0"
 
+
 train_epoch=5
 save_steps=2000
-nl=3
-nh=3
 
+for nl in 1 2
+do
+for nh in 1 2
+do
 for len in 5
 do
 for gt in 0
@@ -23,6 +26,8 @@ python main.py --graph_type $gt\
                 --if_plot n \
                 --if_probe n\
 
+done
+done
 done
 done
 done
