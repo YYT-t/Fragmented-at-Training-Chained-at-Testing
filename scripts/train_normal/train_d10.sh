@@ -1,7 +1,7 @@
 export CUDA_VISIBLE_DEVICES="2"
 
-train_epoch=5
-save_steps=2000
+train_epoch=14
+save_steps=8000
 nl=3
 nh=3
 
