@@ -9,7 +9,7 @@ for len in 15
 do
 for gt in 0 1 2 3 4
 do
-for child_len in 6 4 3 2
+for child_len in 6 5 4 3 2
 do
 python main.py --graph_type $gt\
                --graph_len $len\

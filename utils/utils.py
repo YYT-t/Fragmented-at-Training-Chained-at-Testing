@@ -291,12 +291,12 @@ test_whole_0:{test_whole_0}, test_whole_f:{test_whole_f}")
 
 def do_probe(goal_graph, model, tokenizer, test_max_examples, max_child_len, test_len, probe_mean_num, logger, device, mode, typi):
     from utils.trainers import ProbeTrainer
-    for shot_num in range(test_max_examples-1,test_max_examples):
+    for shot_num in range(0,test_max_examples):
         logger.info(f"shot_num={shot_num}")
         parent_acc = []
         others_acc = []
         self_acc = []
-        for pp in range(probe_mean_num):
+        for pp in tqdm(range(probe_mean_num)):
             logger.info(f"iteration={pp}")
             if mode == "test":
                 child_chain = random.choice(goal_graph.all_child_chains[test_len-1])
@@ -304,18 +304,13 @@ def do_probe(goal_graph, model, tokenizer, test_max_examples, max_child_len, tes
                 dps = list(range(chain_len))
             elif mode == "mk":
                 senmap = goal_graph.generate_mk_senmap(max_child_len)
-                # print(tokenizer.decode(senmap["sen"]))
-                # print(tokenizer.decode(senmap["node_idss"]))
                 dps = senmap["my_dps"]
             for i, test_pos in enumerate(dps):
-                # print("i=", i)
                     if test_pos == 0:
                         continue
-                    for knock_pos in range(test_pos+1): # may have problems
-                            # logger.info(f"knock_pos={knock_pos}, test_pos={test_pos}")
+                    for knock_pos in range(test_pos+1): 
                             eval_acc = []
                             if i == 0 or knock_pos != dps[i-1]:
-                                    # continue with prob 0.7
                                     eps = random.random()
                                     if eps < 0.7:
                                         continue
@@ -341,21 +336,15 @@ def do_probe(goal_graph, model, tokenizer, test_max_examples, max_child_len, tes
                                 self_acc += eval_acc
                             else:
                                 others_acc += eval_acc
-                            eval_mean = np.mean(eval_acc)
-                            # logger.info(f"eval_acc_mean={eval_mean}")
             print("running_parent_acc_mean=", np.mean(parent_acc), "running_parent_acc_std=", np.std(parent_acc))
             print("running_others_acc_mean=", np.mean(others_acc), "running_others_acc_std=", np.std(others_acc))
-            print("running_self_acc_mean=", np.mean(self_acc), "running_self_acc_std=", np.std(self_acc))
         parent_acc_mean = np.mean(parent_acc)
         parent_acc_std = np.std(parent_acc)
         others_acc_mean = np.mean(others_acc)
         others_acc_std = np.std(others_acc)
-        self_acc_mean = np.mean(self_acc)
-        self_acc_std = np.std(self_acc)
         logger.info(f"the result of shot_num={shot_num}")
         logger.info(f"parent_acc_mean={parent_acc_mean}, parent_acc_std={parent_acc_std}")
         logger.info(f"others_acc_mean={others_acc_mean}, others_acc_std={others_acc_std}")
-        logger.info(f"self_acc_mean={self_acc_mean}, self_acc_std={self_acc_std}")
 
 def do_plot(args, goal_graph, model, tokenizer, test_max_examples, test_len, device, train_ds, outs_path, test_epoch):
     child_chain = random.choice(goal_graph.all_child_chains[test_len-1])
