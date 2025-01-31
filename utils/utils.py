@@ -375,11 +375,16 @@ def do_plot(args, goal_graph, model, tokenizer, test_max_examples, test_len, dev
     print(tokenizer.decode(input_ids_mk))
     
     outputs_test = model(torch.tensor(input_ids_test).to(model.device), output_attentions=True)
-    outputs_icl = model(torch.tensor(input_ids_icl).to(model.device), output_attentions=True)
     outputs_mk = model(torch.tensor(input_ids_mk).to(model.device), output_attentions=True)
     box =  (18, 48, 18, 48) #(18, 48, 62, 92)   #(28, 59, 28, 59)  #(28, 59, 119, 150)
     for l in range(args.n_layers):
+        if l > 1:
+            break
         for outputs, name in zip([outputs_test,  outputs_mk], ["test",  "mk"]):
+            if name == "test":
+                 box = (28, 59, 28, 59) if l == 0 else (28, 59, 119, 150)
+            elif name == "icl":
+                 box = (18, 48, 18, 48) if l == 0 else (18, 48, 62, 92)
             plot_dir = f"{outs_path}/plot_{name}_epoch{test_epoch}"
             if not os.path.exists(plot_dir):
                     os.makedirs(plot_dir)
