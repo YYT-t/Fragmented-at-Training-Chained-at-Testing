@@ -3,7 +3,7 @@ from torch.nn import CrossEntropyLoss
 from transformers import AutoTokenizer
 from tqdm import tqdm
 import os
-from utils import do_test
+from utils.utils import do_test
 
 Tokenizer = AutoTokenizer.from_pretrained("gpt2")
 Tokenizer.pad_token = Tokenizer.eos_token

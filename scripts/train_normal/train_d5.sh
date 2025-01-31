@@ -16,12 +16,12 @@ python main.py --graph_type $gt\
                --max_child_chain_len $child_len\
                --n_layers $nl\
                 --n_heads $nh\
-                --if_train y\
+                --if_train n\
                 --train_epoch $train_epoch \
                 --save_steps $save_steps\
-                --if_test y\
+                --if_test n\
                 --if_plot n \
-                --if_probe n\
+                --if_probe y\
 
 done
 done

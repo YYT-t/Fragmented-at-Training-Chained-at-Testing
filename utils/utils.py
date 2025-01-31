@@ -290,7 +290,7 @@ test_whole_0:{test_whole_0}, test_whole_f:{test_whole_f}")
     return res
 
 def do_probe(goal_graph, model, tokenizer, test_max_examples, max_child_len, test_len, probe_mean_num, logger, device, mode, typi):
-    from trainers import ProbeTrainer
+    from utils.trainers import ProbeTrainer
     for shot_num in range(test_max_examples-1,test_max_examples):
         logger.info(f"shot_num={shot_num}")
         parent_acc = []
@@ -304,15 +304,15 @@ def do_probe(goal_graph, model, tokenizer, test_max_examples, max_child_len, tes
                 dps = list(range(chain_len))
             elif mode == "mk":
                 senmap = goal_graph.generate_mk_senmap(max_child_len)
-                print(tokenizer.decode(senmap["sen"]))
-                print(tokenizer.decode(senmap["node_idss"]))
+                # print(tokenizer.decode(senmap["sen"]))
+                # print(tokenizer.decode(senmap["node_idss"]))
                 dps = senmap["my_dps"]
             for i, test_pos in enumerate(dps):
                 # print("i=", i)
                     if test_pos == 0:
                         continue
                     for knock_pos in range(test_pos+1): # may have problems
-                            logger.info(f"knock_pos={knock_pos}, test_pos={test_pos}")
+                            # logger.info(f"knock_pos={knock_pos}, test_pos={test_pos}")
                             eval_acc = []
                             if i == 0 or knock_pos != dps[i-1]:
                                     # continue with prob 0.7
@@ -342,7 +342,7 @@ def do_probe(goal_graph, model, tokenizer, test_max_examples, max_child_len, tes
                             else:
                                 others_acc += eval_acc
                             eval_mean = np.mean(eval_acc)
-                            logger.info(f"eval_acc_mean={eval_mean}")
+                            # logger.info(f"eval_acc_mean={eval_mean}")
             print("running_parent_acc_mean=", np.mean(parent_acc), "running_parent_acc_std=", np.std(parent_acc))
             print("running_others_acc_mean=", np.mean(others_acc), "running_others_acc_std=", np.std(others_acc))
             print("running_self_acc_mean=", np.mean(self_acc), "running_self_acc_std=", np.std(self_acc))
