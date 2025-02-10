@@ -1,4 +1,4 @@
-export CUDA_VISIBLE_DEVICES="0"
+export CUDA_VISIBLE_DEVICES="1"
 
 num_icl_train_traces=10000
 num_mk_train_traces=20000
@@ -17,7 +17,7 @@ for len in 10
 do
 for gt in 0 1 2 3 4
 do
-for child_len in 5 4 3 2
+for child_len in 3 2
 do
 python main.py --num_icl_train_traces $num_icl_train_traces \
                --num_mk_train_traces  $num_mk_train_traces\

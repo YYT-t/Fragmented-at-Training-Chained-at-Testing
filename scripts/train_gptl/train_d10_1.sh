@@ -17,7 +17,7 @@ for len in 10
 do
 for gt in 0 1 2 3 4
 do
-for child_len in 5 4 3 2
+for child_len in 5 4
 do
 python main.py --num_icl_train_traces $num_icl_train_traces \
                --num_mk_train_traces  $num_mk_train_traces\

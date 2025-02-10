@@ -21,9 +21,10 @@ parser.add_argument("--name", type=str)
 
 parser.add_argument("--type", type=str, default="standard")
 
-parser.add_argument("--num_icl_train_traces", type=int, default=2000)
+
+parser.add_argument("--num_icl_train_traces", type=int, default=5000)
 parser.add_argument("--num_icl_valid_traces", type=int, default=100)
-parser.add_argument("--num_mk_train_traces", type=int, default=2000)
+parser.add_argument("--num_mk_train_traces", type=int, default=20000)
 parser.add_argument("--num_mk_valid_traces", type=int, default=100)
 parser.add_argument("--max_examples", type=int, default=5)
 
@@ -36,8 +37,8 @@ parser.add_argument("--tl_low", type=int, default=4)
 parser.add_argument("--addlen", type=int, default=5)
 parser.add_argument("--nearlen", type=int, default=100)
 parser.add_argument("--context_lower", type=int, default=1)
-parser.add_argument("--context_upper", type=int, default=6)
-parser.add_argument("--context_div", type=int, default=6)
+parser.add_argument("--context_upper", type=int, default=7)
+parser.add_argument("--context_div", type=int, default=7)
 
 parser.add_argument("--n_layers", type=int, default=1)
 parser.add_argument("--n_heads", type=int, default=1) 
@@ -71,6 +72,11 @@ elif Args.type == "blur":
 elif Args.type == "skip":
         acc_types = ["whole",  "final", "te_ver", "te_val"]
 name_type_map={"whole":"Whole acc", "final":"Final acc","te_val":"Values acc", "te_ver":"Vertices acc", "te_ver_comp": "Vertices acc full"}
+
+if Args.n_layers == 3:
+        width_map = {
+                2:{5: [2, 3], 8:[2, 3, 4], 10: [2, 3, 4], 13:[2, 3, 4, 5], 15: [2, 3, 4, 6]}
+        }
 
 if Args.n_layers == 12:
         width_map = {
