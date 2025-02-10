@@ -282,11 +282,12 @@ def do_test(goal_graph, model, tokenizer, test_max_examples, test_len, logger=No
     test_final_f = max(res["final"][1:])
     test_whole_0 = res["whole"][0]
     test_whole_f = max(res["whole"][1:])
-    logger.info(f"train vertices acc:{tr_ver}, train value acc:{tr_val}, \
-test vertices 0:{test_ver_0}, test vertices f:{test_ver_f}, \
-test value 0:{test_val_0}, test value f:{test_val_f}, \
-test_final_0:{test_final_0}, test_final_f:{test_final_f}, \
-test_whole_0:{test_whole_0}, test_whole_f:{test_whole_f}")
+    if not logger == None:
+        logger.info(f"train vertices acc:{tr_ver}, train value acc:{tr_val}, \
+    test vertices 0:{test_ver_0}, test vertices f:{test_ver_f}, \
+    test value 0:{test_val_0}, test value f:{test_val_f}, \
+    test_final_0:{test_final_0}, test_final_f:{test_final_f}, \
+    test_whole_0:{test_whole_0}, test_whole_f:{test_whole_f}")
     return res
 
 def do_probe(goal_graph, model, tokenizer, test_max_examples, max_child_len, test_len, probe_mean_num, logger, device, mode, typi):

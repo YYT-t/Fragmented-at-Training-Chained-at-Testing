@@ -7,7 +7,7 @@ cu=6
 train_epoch=14
 tbs=4
 ebs=4
-save_steps=10000
+save_steps=20000
 
 nl=36
 nh=20

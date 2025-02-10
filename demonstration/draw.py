@@ -1,77 +1,51 @@
-import random
 import os
-import copy
-from datasets import Dataset, DatasetDict
-from transformers import AutoTokenizer, AutoConfig, \
-        GPT2LMHeadModel,\
-        Trainer, TrainingArguments, GPT2Tokenizer
-from collators import My_collator
-from configs import MyGPT2Config
+from transformers import AutoTokenizer
+from utils.configs import MyGPT2Config
 import pickle as pkl
-import re
 import torch
-from tqdm import tqdm
-from torch.utils.data.dataloader import DataLoader
 import argparse
 
-from networks import MyGPT2LMHeadModel
+from utils.networks import MyGPT2LMHeadModel
 from data_structure_related.data_structure import Goal_graph
-from utils import *
-
+from utils.utils import *
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import MultipleLocator
-from matplotlib.ticker import MaxNLocator
 
 parser = argparse.ArgumentParser()
+
 parser.add_argument("--model", type=str, default="gpt2")
 parser.add_argument("--mode", type=str, default="main")
-parser.add_argument("--retain_ratio", type=float)
+parser.add_argument("--retain_ratio", type=float, default=0.2)
 parser.add_argument("--name", type=str)
 
 parser.add_argument("--type", type=str, default="standard")
+
 parser.add_argument("--num_icl_train_traces", type=int, default=2000)
 parser.add_argument("--num_icl_valid_traces", type=int, default=100)
 parser.add_argument("--num_mk_train_traces", type=int, default=2000)
 parser.add_argument("--num_mk_valid_traces", type=int, default=100)
 parser.add_argument("--max_examples", type=int, default=5)
 
-parser.add_argument("--max_child_chain_len", type=int, default=2)
 parser.add_argument("--vocab_size", type=int, default=52)
 parser.add_argument("--env_val_num_low", type=int, default=10)
 parser.add_argument("--chain_val_num", type=int, default=50)
-parser.add_argument("--leak_prob_node", type=float, default=0.005)
-parser.add_argument("--leak_prob_val", type=float, default=0.005)
-parser.add_argument("--tl_low", type=int, default=10)
-parser.add_argument("--addlen", type=int, default=2)
+parser.add_argument("--leak_prob_node", type=float, default=0.0)
+parser.add_argument("--leak_prob_val", type=float, default=0.0)
+parser.add_argument("--tl_low", type=int, default=4)
+parser.add_argument("--addlen", type=int, default=5)
 parser.add_argument("--nearlen", type=int, default=100)
 parser.add_argument("--context_lower", type=int, default=1)
-parser.add_argument("--context_upper", type=int, default=7)
-parser.add_argument("--context_div", type=int, default=7)
-
+parser.add_argument("--context_upper", type=int, default=6)
+parser.add_argument("--context_div", type=int, default=6)
 
 parser.add_argument("--n_layers", type=int, default=1)
 parser.add_argument("--n_heads", type=int, default=1) 
 parser.add_argument("--hidden_size", type=int, default=100)
 
-parser.add_argument("--if_train", type=str, default="y")
-parser.add_argument("--train_epoch", type=int, default=10)
-parser.add_argument("--save_steps", type=int, default=1000)
-parser.add_argument("--if_test", type=str, default="y")
-parser.add_argument("--if_plot", type=str, default="y")
-parser.add_argument("--if_probe", type=str, default="y")
-parser.add_argument("--if_draw", type=str, default="y")
-parser.add_argument("--probe_mean_num", type=int, default=10)
-
-parser.add_argument("--if_in_colab", type=str, default="n")
-
 Args = parser.parse_args()
 
 print("Args:", Args)
-
-if Args.if_in_colab=="y":
-        os.chdir("/content/drive/MyDrive/ICL/CoT_theory_mask")
-        print("Current working directory:", os.getcwd())
 
 Tokenizer = AutoTokenizer.from_pretrained(Args.model)
 Tokenizer.pad_token = Tokenizer.eos_token
@@ -148,7 +122,7 @@ _addlen{Args.addlen}_nearlen{Args.nearlen}_tl{Args.tl_low}_shot{Args.max_example
                                 Device = "cuda" if torch.cuda.is_available() else "cpu"
                                 print("Device:", Device)
                                 curves = []
-                                for typi in range(1):
+                                for typi in range(5):
                                         model_dir = f"{data_dir}/{foot_str}/type{typi}/outs_{Args.model}"
                                         print("model_dir:", model_dir)
                                         if not os.path.exists(model_dir):
@@ -175,7 +149,7 @@ _addlen{Args.addlen}_nearlen{Args.nearlen}_tl{Args.tl_low}_shot{Args.max_example
                                                 map_str += "_blur"
                                         elif Args.type == "skip":
                                                 map_str += "_skip"+"_"+str(Args.retain_ratio)
-                                        if False: #os.path.exists(f"{outs_path}/{map_str}.pkl"):
+                                        if os.path.exists(f"{outs_path}/{map_str}.pkl"):
                                                 print("hi")
                                                 with open(f"{outs_path}/{map_str}.pkl", "rb") as f:
                                                         acc_map = pkl.load(f)
