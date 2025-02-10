@@ -80,19 +80,11 @@ if Args.n_layers == 3:
 
 if Args.n_layers == 12:
         width_map = {
-                        #      1:{5: [2, 3], 8: [3, 4], 10: [3, 4], 13: [4, 5], 16: [5, 6, 7]},
-                        #  2:{5: [2, 3], 8:[2, 3, 4]}
-                        # 2:{5: [2, 3], 8:[2, 3, 4], 10: [2, 3, 4], 13:[2, 3, 4, 5], 15: [2, 3, 4, 6]}
                         2:{5: [2, 3], 8:[2, 3, 4], 10: [2, 3, 4], 13:[2, 3, 4, 5], 15: [2, 3, 4, 6]}
-                        #      3:{5: [2, 3], 8: [3, 4], 10: [3, 4], 13: [4, 5], 16: [5, 6, 7]}
                         }
 elif Args.n_layers == 36:
         width_map = {
-                        #      1:{5: [2, 3], 8: [3, 4], 10: [3, 4], 13: [4, 5], 16: [5, 6, 7]},
-                        #  2:{5: [2, 3], 8:[2, 3, 4]}
-                        # 2:{5: [2, 3], 8:[2, 3, 4], 10: [2, 3, 4], 13:[2, 3, 4, 5], 15: [2, 3, 4, 6]}
                         2:{5: [2, 3], 8:[2, 3, 4, 5], 10: [2, 3, 4, 5], 13:[2, 3, 4, 5], 15: [2, 3, 4, 6, 7]}
-                        #      3:{5: [2, 3], 8: [3, 4], 10: [3, 4], 13: [4, 5], 16: [5, 6, 7]}
                         }
 
 if Args.mode == "main":
@@ -322,9 +314,6 @@ _addlen{Args.addlen}_nearlen{Args.nearlen}_tl{Args.tl_low}_shot{Args.max_example
                 if o == len(acc_types)-1:
                         axes[o].set_xlabel('Relative knowledge ratio', fontsize=24, fontweight='bold')
                 axes[o].set_ylabel(f'{name_type_map[acc_tp]}', fontsize=24, fontweight='bold')
-                # axes[o].set_ylabel(f'{acc_tp} acc', fontsize=24, fontweight='bold')
-                # axes[o].set_ylim(0.0, 1.1)  # Ensure the range covers 0.0 to 1.0
-                # axes[o].set_yticks([0.0, 0.5, 1.0])  # Explicit tick marks at 0.0, 0.5, and 1.0
                 axes[o].set_facecolor('lightgrey')
                 axes[o].grid(True, which='both', color='white', linestyle='-', linewidth=0.7)
                 axes[o].minorticks_on()
@@ -334,33 +323,6 @@ _addlen{Args.addlen}_nearlen{Args.nearlen}_tl{Args.tl_low}_shot{Args.max_example
                 axes[o].yaxis.set_minor_locator(MultipleLocator(0.25))
                 axes[o].tick_params(axis='x', colors='black', direction='in', length=6, width=2, labelsize=20)
                 axes[o].tick_params(axis='y', colors='black', direction='in', length=6, width=2, labelsize=20)
-                        #         axes[o][j].plot(range(Args.max_examples), mean_curve, label=f"child chain len={str(child_chain_len)}", color=color_ls[child_chain_len-2], linestyle='-', linewidth=2)
-                        #         axes[o][j].fill_between(range(Args.max_examples), mean_curve - std_curve, mean_curve + std_curve, color=color_ls[child_chain_len-2], alpha=0.2)
-                        #         # axes[o][j].plot(range(Args.max_examples), acc_map[acc_tp], label=f"child chain len={str(child_chain_len)}", color=color_ls[child_chain_len-2], linestyle='-', linewidth=2)
-                        # if o == len(acc_types)-1:
-                        #         axes[o][j].set_xlabel('Shots Num', fontsize=24, fontweight='bold')
-                        # if j == 0:
-                        #         axes[o][j].set_ylabel(f'{acc_tp} acc', fontsize=24, fontweight='bold')
-                        # if o == 0:
-                        #         axes[o][j].set_title(f"depth={leng}", fontsize=24, fontweight='bold')
-                        # axes[o][j].set_facecolor('lightgrey')
-                        # axes[o][j].grid(True, which='both', color='white', linestyle='-', linewidth=0.7)
-                        # axes[o][j].minorticks_on()
-
-                        # axes[o][j].xaxis.set_major_locator(MultipleLocator(1))  # Major ticks every 2 units
-                        # axes[o][j].yaxis.set_major_locator(MultipleLocator(0.5))  # Major ticks every 0.5 units
-                        # axes[o][j].xaxis.set_minor_locator(MultipleLocator(1))  # Minor ticks every 1 unit
-                        # axes[o][j].yaxis.set_minor_locator(MultipleLocator(0.5))  # Minor ticks every 0.25 units
-                        # axes[o][j].tick_params(axis='x', colors='black', direction='in', length=6, width=2, labelsize=20)
-                        # axes[o][j].tick_params(axis='y', colors='black', direction='in', length=6, width=2, labelsize=20)
-
-                        # Show legend
-                        # axes[o][j].legend(frameon=True, loc='upper left',bbox_to_anchor=(1.0, 1.0), fontsize=20)
-        # for child_chain_len in all_child_chain_len:
-        #         line_proxies.append(plt.Line2D([0], [0], color=color_ls[child_chain_len-2], linewidth=2))
-        #         labels.append(f"child_chain_len={str(child_chain_len)}")
-        # fig.legend(handles=line_proxies, labels=labels, loc='upper center', bbox_to_anchor=(0.48, 1.01), ncol=len(all_child_chain_len), fontsize=24)
-
         # Adjust layout to prevent overlap
         plt.tight_layout(rect=[0, 0, 0.95, 0.95])
 
