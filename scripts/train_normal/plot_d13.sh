@@ -9,7 +9,7 @@ for len in 13
 do
 for gt in 0
 do
-for child_len in 5
+for child_len in 6
 do
 python main.py --graph_type $gt\
                --graph_len $len\

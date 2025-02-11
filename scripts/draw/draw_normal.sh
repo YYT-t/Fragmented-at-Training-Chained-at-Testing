@@ -4,7 +4,7 @@ nh=3
 hidden_size=720
 
 python demonstration/draw.py \
-            --mode main \
+            --mode ratio \
                 --type standard \
                 --name acc_map_1 \
                --n_layers $nl\
