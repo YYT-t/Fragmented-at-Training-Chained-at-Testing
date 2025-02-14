@@ -1,18 +1,18 @@
 import os
 from transformers import AutoTokenizer
-from configs import MyMLPConfig
+from utils.configs import MyMLPConfig
 import pickle as pkl
 import torch
 from torch.utils.data.dataloader import DataLoader
 import argparse
 
-from networks import MyMLP
+
+from utils.networks import MyMLP
 from data_structure_related.data_structure import Goal_graph
 import logging
 import sys
-from probing_related import *
-from trainers import MLPTrainer
-from utils import *
+from utils.trainers import MLPTrainer
+from utils.utils import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--model", type=str, default="mlp")

@@ -13,7 +13,7 @@ python main_mlp.py --graph_type $gt\
                --n_layers $nl\
                 --hidden_size $hidden_size\
                 --window_size $wind\
-                --if_train n\
+                --if_train y\
                 --train_epoch 20 \
                 --save_steps 2780\
                 --if_test y\

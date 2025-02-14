@@ -21,6 +21,7 @@ python demonstration/draw.py --mode ratio \
                --n_layers $nl\
                 --n_heads $nh\
                 --hidden_size $hidden_size\
+                --model_size gptsmall
 
 
 ##$(($num_traces+$num_traces)) \

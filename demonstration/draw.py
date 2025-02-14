@@ -43,6 +43,8 @@ parser.add_argument("--context_div", type=int, default=7)
 parser.add_argument("--n_layers", type=int, default=1)
 parser.add_argument("--n_heads", type=int, default=1) 
 parser.add_argument("--hidden_size", type=int, default=100)
+parser.add_argument("--model_size", type=str)
+
 
 Args = parser.parse_args()
 
@@ -209,9 +211,10 @@ _addlen{Args.addlen}_nearlen{Args.nearlen}_tl{Args.tl_low}_shot{Args.max_example
 
         # Adjust layout to prevent overlap
         plt.tight_layout(rect=[0, 0, 0.95, 0.95])
-
+        
+        # plt.show()
         # Save the figure with a grey background
-        plt.savefig('fs_and_chain_len.png', facecolor=fig.get_facecolor())
+        plt.savefig(f'fs_and_chain_len_{Args.model_size}.png', facecolor=fig.get_facecolor())
 
 
 if Args.mode == "ratio":
@@ -327,4 +330,4 @@ _addlen{Args.addlen}_nearlen{Args.nearlen}_tl{Args.tl_low}_shot{Args.max_example
         plt.tight_layout(rect=[0, 0, 0.95, 0.95])
 
         # Save the figure with a grey background
-        plt.savefig('ratio.png', facecolor=fig.get_facecolor())
+        plt.savefig(f'ratio_{Args.model_size}.png', facecolor=fig.get_facecolor())

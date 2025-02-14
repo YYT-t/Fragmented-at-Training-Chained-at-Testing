@@ -19,7 +19,7 @@ python main.py --graph_type $gt\
                --max_child_chain_len $child_len\
                --n_layers $nl\
                 --n_heads $nh\
-                --if_train n\
+                --if_train y\
                 --train_epoch $train_epoch \
                 --save_steps $save_steps\
                 --if_test y\
@@ -47,7 +47,7 @@ python main.py --graph_type $gt\
                --max_child_chain_len $child_len\
                --n_layers $nl\
                 --n_heads $nh\
-                --if_train n\
+                --if_train y\
                 --train_epoch $train_epoch \
                 --save_steps $save_steps\
                 --if_test y\
