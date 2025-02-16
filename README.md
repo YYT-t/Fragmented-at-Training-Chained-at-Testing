@@ -5,3 +5,4 @@ Code of the paper "Are Transformers Able to Reason by Connecting Separated Knowl
 run  ```pip install -r requirements.txt```.
 
 ## Experiments
+All experiments are included in ```experiements.ipynb```
