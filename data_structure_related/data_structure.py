@@ -519,18 +519,10 @@ cd{self.context_div}_nl{noise_range[0]}_nu{noise_range[1]}.pkl"
             outputs = outputs[:, prompts.size(1):]
             _predicts = tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
-            # print("prompts:", prompts[0:1])
-            # print("prompts:", prompts[0:1])
-            # print("prompts:", self.tokenizer.batch_decode(prompts[0:1], skip_special_tokens=True))
-            # print("targets:", self.tokenizer.batch_decode(targets[0:1], skip_special_tokens=True))
-            # print("predicts:", _predicts[0:1])
-            # print("targets:", targets[0:1])
             for i in range(len(outputs)):
                 pattern = r'(\w=\d+)'
                 targets_matches = re.findall(pattern, tokenizer.decode(targets[i]))
                 predicts_matches = re.findall(pattern, _predicts[i])
-                # print("predicts_matches:", predicts_matches)
-                # print("targets_matches:", targets_matches)
                 
                 tar_pt = 0
                 tar_pt_let = 0
@@ -538,11 +530,8 @@ cd{self.context_div}_nl{noise_range[0]}_nu{noise_range[1]}.pkl"
                 for j in range(len(predicts_matches)):
                     if tar_pt < len(targets_matches) and predicts_matches[j] == targets_matches[tar_pt]:
                         tar_pt += 1
-                    # if predicts_matches[j] == targets_matches[-1]:
-                    #     correct_final = True
                     if tar_pt_let < len(targets_matches) and predicts_matches[j][0] == targets_matches[tar_pt_let][0]:
                         tar_pt_let += 1
-                # correct_final = (predicts_matches[len(targets_matches)-1] == targets_matches[-1])
                 for j in range(len(predicts_matches)-1, -1, -1):
                     if predicts_matches[j][0] == targets_matches[-1][0]:
                         correct_final = (predicts_matches[j] == targets_matches[-1])
@@ -587,7 +576,6 @@ cd{self.context_div}_nl{noise_range[0]}_nu{noise_range[1]}.pkl"
             node_xs.append(node_trace_examples)
             next_num_tok = self.tokenizer.encode(str(mk_inter_vals[shot_num][mk_dps[1]]))[0]
             node_ys.append([mk_sen[mk_dps[1]], next_num_tok])
-            # print("node_ys:", node_ys[-1])
 
             full_trace.append(trace_examples + que_map["trace_full"])
             context_len = max(context_len, len(full_trace[-1]))
@@ -595,9 +583,7 @@ cd{self.context_div}_nl{noise_range[0]}_nu{noise_range[1]}.pkl"
             val_trace_examples = trace_examples + que_map["ls_wo_value"][mk_dps[1]]
             val_xs.append(val_trace_examples)
             val_ys.append(next_num_tok)
-        # print("context_len:", context_len)
-        # for inn in node_xs:
-        #     print("len(inn):", len(inn))
+            
         node_input_ids = [[self.tokenizer.pad_token_id] * (context_len - len(inn)) + inn for inn in node_xs]
         node_attention_mask = [[0] * (context_len - len(inn)) + [1]*len(inn) for inn in node_xs]
         val_input_ids = [[self.tokenizer.pad_token_id] * (context_len - len(inn)) + inn for inn in val_xs]
